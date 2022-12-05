@@ -1,8 +1,11 @@
 # Given an integer array nums, return true if any value appears at least twice in the array, 
 # and return false if every element is distinct.
 
+from typing import List
+
+
 class Solution:
-    def ContainsDuplicate(self, nums= [1, 5, 7, 9, 3]) -> bool:
+    def ContainsDuplicate(nums: List[int]) -> bool:
         hashset = set()
 
         for n in nums:
@@ -10,3 +13,8 @@ class Solution:
                 return True
             hashset.add(n)
         return False
+    
+    myListnums = [1, 5, 7, 9, 3]
+    result = ContainsDuplicate(myListnums)
+
+    print(result)
